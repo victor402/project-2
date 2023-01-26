@@ -3,9 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// connect to the database with Mongoose
+//basically this helps connect database with mongoose
+//it help to connect to mangoDb at the localhost.
+require('./config/database');
+
+//it comes before indexRouter because you have to make sure the database is loaded before any code is run.
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+var restaurantsRouter = require('./routes/restaurants');
+
+
 
 var app = express();
 
@@ -20,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/restaurants', restaurantsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
