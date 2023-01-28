@@ -14,6 +14,8 @@ var indexRouter = require('./routes/index');
 
 var restaurantsRouter = require('./routes/restaurants');
 
+var reservationsRouter = require('./routes/reservations');
+
 
 
 var app = express();
