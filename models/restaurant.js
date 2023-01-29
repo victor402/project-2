@@ -9,7 +9,7 @@ var reservationSchema = new Schema({
     name: String,
     guests: Number,
     date: Date,
-    time: Date,
+    time: String,
 })
 
 var restaurantSchema = new Schema({

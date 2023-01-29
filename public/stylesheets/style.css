@@ -87,12 +87,16 @@ nav > a.active {
 }
 #first {
   display: flex;
+  margin-bottom: 10px ;
 }
 #first > div {
   padding: 10px;
 }
+#list {
+  margin-top: 40px;
+}
 
-/* table {
+table {
   font-size: 20px;
 }
 
@@ -104,7 +108,7 @@ table thead th {
 table td {
   padding: 10px;
   text-align: center;
-} */
+}
 
 #list td:nth-child(2), #list td:nth-child(3){
   min-width: 100px;

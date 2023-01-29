@@ -33,8 +33,8 @@ function create(req, res, next) {
 } 
 
 function show(req, res) {
-    Movie.findById(req.params.id, (err, restaurant) => {
-      res.render('restaurants/show', { title: 'Restaurant Booking', restaurant });
+    Restaurant.findById(req.params.id, (err, restaurant) => {
+      res.render('restaurants/show', { title:'Book a table', restaurant });
     });
   }
 
