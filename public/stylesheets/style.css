@@ -109,6 +109,9 @@ table td {
   padding: 10px;
   text-align: center;
 }
+#rate {
+  margin-top: 40px;
+}
 
 #list td:nth-child(2), #list td:nth-child(3){
   min-width: 100px;
