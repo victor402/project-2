@@ -42,6 +42,9 @@
   <input type="submit" value="Reserve">   
 </form>
 
+
+
+
 <h2 id="list"> Reservation List</h2>
 
 <% if (restaurant.reservations.length) { %>
@@ -54,7 +57,7 @@
         <th>Date</th>
       </tr>
     </thead>
-    <tbody id>
+    <tbody>
       <% restaurant.reservations.forEach(function(r) { %>
         <tr>
           <td>
@@ -69,12 +72,13 @@
           <td>
             <%= r.date.toLocaleDateString() %>
           </td>
-        </tr>
         <% }); %>
       </tbody>
     </table>
  <% } else { %>
   <h5>No Reservation</h5>
-<% } %>     
+<% } %>  
+
+<a href="/reviews/new">RATE YOUR EXPERIENCE</a>
 
 <%- include('../partials/footer') %>

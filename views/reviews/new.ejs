@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<form action="/reviews" method="post">
+    <label>Review:
+        <textarea name="content"></textarea>
+    </label>
+    <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="submit" value="ADD REVIEW">
+</form>
+
+
+<% if (reviews.length) { %>
+    <table>
+    <thead>
+        <tr>
+            <th>REVIEW</th>
+            <th>RATE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% reviews.forEach(function(r){ %>
+            <tr>
+                <td>
+                    r.review
+                </td>
+                <td>r.rate</td>
+            </tr>
+            <% }); %>
+    </tbody>
+    </table>
+
+    <% } else { %>
+        <h5>No Review</h5>
+      <% } %>  
+
+<%- include('../partials/footer') %>
