@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<form action="/reviews" method="post">
+<form action="/restaurants/<%=restaurantId%>/reviews" method="post">
     <label>Review:
-        <textarea name="content"></textarea>
+        <textarea name="message"></textarea>
     </label>
     <label>Rating:</label>
       <select name="rating">
@@ -28,9 +28,9 @@
         <% reviews.forEach(function(r){ %>
             <tr>
                 <td>
-                    r.review
+                    <%= r.message %>
                 </td>
-                <td>r.rate</td>
+                <td><%= r.rating %> </td>
             </tr>
             <% }); %>
     </tbody>

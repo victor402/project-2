@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 var reviewSchema = new Schema({
     message:{type: String, required:true},
-    Rating:{ type:Number, min:1, max:5},
+    rating:{ type:Number, min:1, max:5},
+    restaurant: {type:mongoose.SchemaTypes.ObjectId, ref: 'Restaurant' }
 });
 
-module.export = mongoose.model('review', reviewSchema);
+module.exports = mongoose.model('review', reviewSchema);
