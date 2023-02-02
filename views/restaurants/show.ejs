@@ -66,12 +66,14 @@
           <td>
             <%= r.guests %>
           </td>
-          <td>
+          <td>                                     
             <%= r.time %>
           </td>
           <td>
             <%= r.date.toLocaleDateString() %>
           </td>
+          <td> <a href="/reservations/<%=r._id %>/edit"> Edit</a></td>
+          
           
         <% }); %>
       </tbody>
