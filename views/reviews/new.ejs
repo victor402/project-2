@@ -31,7 +31,13 @@
                     <%= r.message %>
                 </td>
                 <td><%= r.rating %> </td>
+                <td>
+                    <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                        <button type="submit">DELETE COMMENT</button>
+                    </form>
+                </td>
             </tr>
+            
             <% }); %>
     </tbody>
     </table>
@@ -39,5 +45,6 @@
     <% } else { %>
         <h5>No Review</h5>
       <% } %>  
+     
 
 <%- include('../partials/footer') %>

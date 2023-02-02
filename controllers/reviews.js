@@ -19,12 +19,26 @@ var review = new Review(req.body);
 res.redirect(`/restaurants/${req.params.id}/reviews/new`);
  });
 };
+ 
 
+function deleteReview(req, res, next) {
+  console.log(req.params);
+  Review.findByIdAndDelete(req.params.id, function(err, review) {
+    if(err) {
+      res.redirect(`/restaurants/${review.restaurant}/reviews/new`)
+    }
+    res.redirect(`/restaurants/${review.restaurant}/reviews/new`)
+    console.log(err);
+    console.log(review);
+  });
+  
+  
 
-
+}
 
 
 module.exports = {
     new:newReview,
-    create
+    create,
+    delete:deleteReview,
   };
