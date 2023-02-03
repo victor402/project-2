@@ -1,16 +1,10 @@
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-} */
 
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: black;
+  
 }
 
 body {
@@ -25,7 +19,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: white ;
   display: flex;
   justify-content: flex-end;
   align-items: center;

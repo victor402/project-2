@@ -19,15 +19,15 @@ console.log("successful");
 console.log(restaurant.reservations.id(req.params.id))
 const reservation = restaurant.reservations.id(req.params.id)
 console.log(restaurant)
-    res.render('restaurants/edit', {reservation});
+    res.render('restaurants/edit', {reservation, title:'Update Reservation'});
   });
 }
 
 function update(req, res, next) {
   
-  Restaurant.findOne({'reservations._id': req.params.id}, function(err, restaurant) {
+  Restaurant.findByIdAndUpdate({'reservations._id': req.params.id}, function(err, restaurant) {
     
-    const Reservation = restaurant.reservations.id(req.params.id);
+    const reservation = restaurant.reservations.id(req.params.id);
     
     Reservation.name = req.body.name;
     Reservation.guests = req.body.guests;

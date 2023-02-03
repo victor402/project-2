@@ -1,3 +1,7 @@
+<%- include('../partials/header') %>
+
+
+
 <form action="/reservations/<%= reservation._id %>?_method=PUT" method="POST">
     
         <label> Name:
@@ -9,7 +13,6 @@
       <label>Time:
         <select name="hours">
           
-          <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
           <option value="11">11</option>
@@ -39,4 +42,7 @@
     
     <button type="submit">UPDATE Reserve</button>
   </form>
+
   
+
+  <%- include('../partials/footer') %>
