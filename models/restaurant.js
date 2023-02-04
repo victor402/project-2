@@ -6,20 +6,51 @@ const mongoose = require('mongoose'); // this require the mongoose library.
 const Schema = mongoose.Schema;
 
 var reservationSchema = new Schema({
-    name: String,
-    guests: Number,
-    date: Date,
-    time: String,
-})
+    name: {
+        type: String,
+        required: true,
+    },
+    guests:{ 
+        type: Number, min: 1, max: 20,
+    },
+    date:{ 
+        type: Date,
+    },
+    time:  {
+        type: String,
+        required: true,
+    },
+}, {
+    timestamps: true
+});
+
 
 var restaurantSchema = new Schema({
-    name: String,
-    location: String,
-    open: String,
-    close: String,
-    tables: String,
+    name: {
+        type: String,
+        required: true,
+    },
+    location:{ 
+        type: String,
+        required: true,
+    },
+    open: {
+        type: String,
+        required: true,
+    },
+    close: {
+        type: String,
+        required: true,
+    },
+    tables: {
+        type: String,
+        required: true,
+    },
     reservations: [reservationSchema],
-    })
+    }, {
+        timestamps: true
+    });
+    
 
 
 // Compile the schema into a model and export it

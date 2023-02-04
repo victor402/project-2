@@ -41,6 +41,10 @@ body > main {
   padding: 20px;
   overflow-y: scroll;
 }
+#add, #reserve {
+  margin: 10px 10px;
+  margin-left: 100px;
+}
 
 body > main h1:first-child {
   margin-bottom: 50px;
