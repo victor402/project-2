@@ -136,6 +136,9 @@ table td {
 #show-page div:nth-child(even) {
   font-weight: bold;
 }
+#reviews-table {
+  margin-top: 40px;
+}
 
  #add-review-form {
    display: grid;
