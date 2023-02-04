@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var methodOverride = require('method-override');
+
+require('dotenv').config()
 // connect to the database with Mongoose
 //basically this helps connect database with mongoose
 //it help to connect to mangoDb at the localhost.
