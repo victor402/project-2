@@ -41,7 +41,7 @@ body > main {
   padding: 20px;
   overflow-y: scroll;
 }
-#add, #reserve {
+#add, #reserve, #update-reserve {
   margin: 10px 10px;
   margin-left: 100px;
 }
