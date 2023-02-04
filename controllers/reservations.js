@@ -2,6 +2,8 @@ const Restaurant = require('../models/restaurant');
 
 function create(req, res, next){
   req.body.time = req.body.hours+ ':' +  req.body.minutes;
+
+  req.body.date = new Date(req.body.date +'T00:00:00');
 Restaurant.findById(req.params.id, function(err, restaurant) {
     restaurant.reservations.push(req.body);
     console.log(req.body);
@@ -29,11 +31,13 @@ function update(req, res, next) {
     
     var reservation = restaurant.reservations.id(req.params.id);
     
-    Reservation.name = req.body.name;
-    Reservation.guests = req.body.guests;
-    Reservation.hours = req.body.hours;
-    Reservation.minutes = req.body.minutes;
-    req.body.time = req.body.hours+ ':' + req.body.minutes;
+    reservation.name = req.body.name;
+    reservation.guests = req.body.guests;
+    reservation.hours = req.body.hours;
+    reservation.minutes = req.body.minutes;
+    reservation.time = req.body.hours+ ':' + req.body.minutes;
+    reservation.date = new Date(req.body.date +'T00:00:00');
+    console.log(typeof req.body.date);
     
     restaurant.save(function(err) {
       
