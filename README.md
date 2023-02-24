@@ -10,7 +10,7 @@
 ![ERD](/ERD.png)
 ![restaurant](/restaurant.png)
 ![reserve](/reserve.png)
-![review](/review.png)
+![review](/reviews.png)
 ![resindex](/resindex.png)
 ![update](/update.png)
 
